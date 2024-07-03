@@ -1,0 +1,119 @@
+/* SearchBar.css */
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 1px 5px 5px rgba(7, 7, 7, 0.468);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px; /* Limit maximum width */
+    margin-left: 20vh;
+    margin-right: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+    flex: 1; /* Use flex: 1 to allow items to grow and fill available space */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    flex: 1; /* Use flex: 1 to allow items to grow and fill available space */
+}
+.input-container select {
+    appearance: none; /* Removes default appearance */
+    padding: 8px;
+    cursor: pointer;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    color: #555;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.input-container select:focus {
+    border-color: #007bff; /* Example focus color */
+}
+
+.form-select:focus{
+    outline: none;
+    box-shadow: 0 0 15px 4px rgba(0, 115, 255, 0.3); /* Gradient shadow effect */
+    transition:  0.4s ease-out;
+}
+.input-container h6 {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+}
+
+.input-container input {
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    padding: 8px;
+    width: 100%; /* Adjust width as needed */
+}
+.input-container input:focus {
+    outline: none;
+    box-shadow: 0 0 15px 4px rgba(0, 115, 255, 0.3); /* Gradient shadow effect */
+    transition:  0.4s ease-out;
+  }
+
+.search-button {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    border-radius: 50%;
+    background-color: #3C65F5;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.search-icon:hover {
+    background-color: #025fcc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-bar-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        overflow: hidden; /* Prevent horizontal overflow */
+        margin-left: 2vh;
+        margin-right: 2vh;
+    }
+
+    .input-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

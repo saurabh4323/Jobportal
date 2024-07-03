@@ -86,6 +86,7 @@
     margin: 0 0.5vw;
     border-radius: 40px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 .register:hover{
     background-color: #025fcc;;
@@ -107,7 +108,50 @@
     margin-left: 1vw;
     cursor: pointer;
 }
-
+.responsive-menu {
+    position: absolute;
+    top: 60px; /* Adjust as needed based on your design */
+    right: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-in-out forwards;
+  }
+  
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: auto;
+  }
+  
+  .menu-items .link,
+  .menu-items .login,
+  .menu-items .register {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+  }
+  
+  .menu-items .link:hover,
+  .menu-items .login:hover,
+  .menu-items .register:hover {
+    background-color: #f0f0f0;
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 @media (max-width: 900px) {
     .nav-center h4 {
         display: none;
@@ -151,5 +195,13 @@
         font-size: 7vw;
         margin: 0 5vw;
         display: block;
+    }
+    .menu-items Button{
+        font-size: 1.2vh;
+        margin-bottom: 1.6vh;
+        width: auto;
+    }
+    .menu-items .register{
+        width: 60vh;
     }
 }

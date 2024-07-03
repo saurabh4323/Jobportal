@@ -8,7 +8,7 @@ function Landing() {
   return (
     <div className="App">
       <Menu />
-      <Home></Home>
+      <Home />
       <Footer />
     </div>
   );

@@ -9,7 +9,6 @@
     transform: translateY(0);
   }
 }
-
 .left img {
   padding: 5px;
   margin-top: 50px;
@@ -38,7 +37,7 @@ width: 100%;
   width: 50%;
 }
 .color-brand-2{
-  color: #0073ff;
+  color: #3C65F5;
 }
 .heading-banner{
   
@@ -87,7 +86,10 @@ width: 100%;
 }
 .dright{
   width: 40%;
-
+}
+.dright button{
+  border-radius: 20px;
+  margin-right: 14vh;
 }
 .dright h1{
   width: 450px;
@@ -95,6 +97,6 @@ width: 100%;
   
 }
 .dright span {
-  color: #0073ff;
+  color: #3C65F5;
   
 }

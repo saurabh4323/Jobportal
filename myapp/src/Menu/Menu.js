@@ -7,9 +7,14 @@ import { Login } from "../Login/Login";
 
 export const Menu = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+  };
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   return (
@@ -48,10 +53,40 @@ export const Menu = () => {
               <Button className="register">Register</Button>
             </Link>
             <i>
-              <HiMenuAlt1 />
+            <HiMenuAlt1 className="menu-icon" onClick={toggleMenu} />
             </i>
           </div>
         </div>
+        {/* Responsive Menu */}
+        {showMenu && (
+        <div className="responsive-menu">
+          <div className="menu-items">
+            <Link to="/" className="link" onClick={() => setShowMenu(false)}>
+              Home
+            </Link>
+            <Link
+              to="/job"
+              className="link"
+              onClick={() => setShowMenu(false)}
+            >
+              Find a Job
+            </Link>
+            <Link
+              to="/contact"
+              className="link"
+              onClick={() => setShowMenu(false)}
+            >
+              Contact Us
+            </Link>
+            <Button className="login" onClick={() => setShowMenu(false)}>
+              Login
+            </Button>
+            <Link to="/register" onClick={() => setShowMenu(false)}>
+              <Button className="register">Register</Button>
+            </Link>
+          </div>
+        </div>
+      )}
       </div>
     </div>
   );

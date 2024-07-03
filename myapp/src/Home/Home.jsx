@@ -2,6 +2,8 @@ import React from "react";
 import "./home.css";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import SearchBar from "../SearchBar/SearchBar";
+
 const Home = () => {
   return (
     <div className="main">
@@ -25,6 +27,7 @@ const Home = () => {
           ></img>
         </div>
       </div>
+      <SearchBar />
       <div className="dside">
         <div className="dleft">
           <img
@@ -48,7 +51,7 @@ const Home = () => {
             Millions Of Jobs. <span>Find The One </span> <br></br>That’s Right
             For You
           </h1>
-          <Button variant="contained">SEARCH JOB</Button>
+          <Button variant="contained" style={{backgroundColor:'#3C65F5'}}>SEARCH JOB</Button>
         </div>
       </div>
     </div>

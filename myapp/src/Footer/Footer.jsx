@@ -66,10 +66,10 @@ export default function Footer() {
                             />
                         </Box>
                         <Typography variant="body2" fontWeight={600} gutterBottom>
-                            Newsletter
+                            JobPortal
                         </Typography>
                         <Typography variant="body2" color="text.secondary" mb={2}>
-                            Subscribe to our newsletter for weekly updates and promotions.
+                            Subscribe to our JobPortal for weekly updates and Hiring.
                         </Typography>
                         <Stack direction="row" spacing={1} useFlexGap>
                             <TextField
