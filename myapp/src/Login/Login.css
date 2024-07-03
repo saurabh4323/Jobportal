@@ -24,7 +24,7 @@ body {
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to top, rgba(256, 256, 256, 0.95), rgba(256, 256, 256, 0.02));
+    background: linear-gradient(to top, rgba(256, 256, 256, 0.95), rgba(256, 256, 256, 0.04));
 }
 
 .toggle-container {
