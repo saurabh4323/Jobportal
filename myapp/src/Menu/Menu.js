@@ -43,9 +43,7 @@ export const Menu = () => {
             <h4>Contact Us</h4>
           </div>
           <div className="nav-right">
-            <Link to="/login" className="btn btn-primary">
-              <button className="login">Login</button>
-            </Link>
+            <button className="login">Login</button>
             <Link to="/register" className="btn btn-primary">
               <Button className="register">Register</Button>
             </Link>
