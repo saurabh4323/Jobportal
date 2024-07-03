@@ -44,11 +44,14 @@ export const Menu = () => {
                 Find a Job
               </h4>
             </Link>
-
-            <h4>Contact Us</h4>
+            <Link to="/contact" className="link">
+              <h4>Contact Us</h4>
+            </Link>
           </div>
           <div className="nav-right">
-            <button className="login">Login</button>
+            <Link to="/login" className="btn btn-primary">
+              <button className="login">Login</button>
+            </Link>
             <Link to="/register" className="btn btn-primary">
               <Button className="register">Register</Button>
             </Link>
