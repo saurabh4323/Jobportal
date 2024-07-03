@@ -22,4 +22,4 @@ app.use(cors());
 app.use('/api/users', userRoutes)
 
 
-app.listen(PORT, () => console.log('server started'))
+app.listen(PORT, () => console.log(`server started on ${PORT}`))
