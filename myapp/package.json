@@ -21,11 +21,8 @@
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.0",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
     "remixicon": "^4.3.0",
-=======
     "react-select": "^5.8.0",
->>>>>>> 1206bd8e069f61445c16626cefbe0ad9990a769f
     "web-vitals": "^2.1.4"
   },
   "scripts": {
