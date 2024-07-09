@@ -36,6 +36,7 @@ export const Login = () => {
                     <button type="submit">Login</button>
                 </form>
                 <p>Don't have an account? <Link to={isJobSeeker ? "/register" : "/employer-register"} style={{ textDecoration: 'none' }}>Register</Link></p>
+                <p><Link to="/" style={{ textDecoration: 'none',color:'black'}}>Back to Home</Link></p>
             </div>
         </div>
     );

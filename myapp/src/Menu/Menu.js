@@ -4,6 +4,7 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { Login } from "../Login/Login";
+import logo from '../images/logo.png'
 
 export const Menu = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -23,7 +24,7 @@ export const Menu = () => {
         <div className="nav">
           <div className="nav-left">
             <img
-              src="https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg"
+              src={logo}
               alt=""
             />
           </div>

@@ -7,7 +7,7 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-
+import logo from '../images/logo.png'
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
@@ -58,9 +58,7 @@ export default function Footer() {
                     <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
                         <Box sx={{ ml: '-15px' }}>
                             <img
-                                src={
-                                    'https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg'
-                                }
+                                src={logo}
                                 style={logoStyle}
                                 alt="logo of sitemark"
                             />

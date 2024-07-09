@@ -91,7 +91,7 @@ const Contact = () => {
               <ContactIcon>
                 <LocationOnIcon color="primary" />
               </ContactIcon>
-              <Typography variant="body1">Inida , Noida</Typography>
+              <Typography variant="body1">India , Noida</Typography>
             </ContactInfoBox>
             <ContactInfoBox>
               <ContactIcon>
@@ -140,6 +140,10 @@ const Contact = () => {
                   type="submit"
                   variant="contained"
                   color="primary"
+                  style={{
+                   borderRadius:"50px",
+                   backgroundColor:"#3C65F5"
+                  }}
                   endIcon={<SendIcon />}
                 >
                   Send

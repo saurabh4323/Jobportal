@@ -50,6 +50,7 @@ export const Register = () => {
                     <button type="submit">Register</button>
                 </form>
                 <p>Already have an account? <Link to="/login" style={{ textDecoration: 'none' }}>LogIn</Link></p>
+                <p><Link to="/" style={{ textDecoration: 'none',color:'black'}}>Back to Home</Link></p>
             </div>
         </div>
     );
