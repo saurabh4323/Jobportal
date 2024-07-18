@@ -1,4 +1,7 @@
 import Users from "../Models/userModel.js";
+import Applications from '../Models/Application.js'
+import JobPosting from "../Models/JobPosting";
+
 
 import asyncHandler from "express-async-handler";
 import OTP from "../Models/otpModel.js";
@@ -37,6 +40,7 @@ const authUser = asyncHandler(async (req, res) => {
     throw new Error("Invalid email or password");
   }
 });
+
 
 //register user
 
@@ -87,6 +91,7 @@ const SendOtp = asyncHandler(async (req, res) => {
   }
 });
 
+
 const verifyRegistration = asyncHandler(async (req, res) => {
   const { userName, email, mobile, password, otp } = req.body;
 
@@ -116,5 +121,29 @@ const verifyRegistration = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser, SendOtp, verifyRegistration };
+
+
+const listJobs = asyncHandler(async (req, res) => {
+  const userId = req.user._id;
+
+  // Get the list of job IDs that the user has applied for
+  const appliedJobIds = (await Applications.find({ userId }).distinct("jobId")).map(id => id.toString());
+
+  // Find all jobs
+  const allJobs = await JobPosting.find().sort({ createdAt: -1 });
+
+  // Additional filter to exclude applied jobs
+  const jobsNotApplied = allJobs.filter(
+    (job) => !appliedJobIds.includes(job._id.toString())
+  );
+
+
+  if (jobsNotApplied.length > 0) {
+    res.json(jobsNotApplied);
+  } else {
+    res.json(allJobs);
+  }
+});
+
+export { authUser, SendOtp, verifyRegistration , listJobs };
 //hi
