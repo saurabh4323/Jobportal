@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const jobPostingSchema = new Schema(
@@ -53,4 +53,4 @@ const jobPostingSchema = new Schema(
 
 const JobPosting = mongoose.model("JobPosting", jobPostingSchema);
 
-module.exports = JobPosting;
+export default JobPosting;
