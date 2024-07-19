@@ -32,15 +32,15 @@ export const Menu = () => {
             <Link to="/" className="link">
               <h4
                 onClick={() => handleLinkClick("home")}
-                style={{ color: activeLink === "home" ? "red" : "black" }}
+                // style={{ color: activeLink === "home" ? "blue" : "black" }}
               >
                 Home
               </h4>
             </Link>
             <Link to="/job" className="link">
               <h4
-                onClick={() => handleLinkClick("home")}
-                style={{ color: activeLink === "home" ? "red" : "black" }}
+                onClick={() => handleLinkClick("findjob")}
+                // style={{ color: activeLink === "findjob" ? "blue" : "bule" }}
               >
                 Find a Job
               </h4>

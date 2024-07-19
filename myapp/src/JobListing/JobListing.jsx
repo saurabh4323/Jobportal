@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+// JobListing.jsx
+import React, { useState, useContext } from 'react';
 import './JobListing.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faTasks, faMapMarkerAlt, faMoneyBillWave } from '@fortawesome/free-solid-svg-icons';
-import { Menu } from '../Menu/Menu';
+import { JobContext } from '../JobContext';
+import {Menu} from '../Menu/Menu';
 import Footer from '../Footer/Footer';
 
 const JobListing = () => {
-    const [jobs, setJobs] = useState([]);
+    const { jobs, setJobs } = useContext(JobContext);
     const [formState, setFormState] = useState({
         id: null,
         title: '',

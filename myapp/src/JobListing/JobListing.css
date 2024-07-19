@@ -50,7 +50,7 @@ body {
   
   .job-form button {
     padding: 10px 20px;
-    background: linear-gradient(45deg, #0274ff, #00c6ff);
+    background: linear-gradient(45deg, #0274ff, #0274ff);
     color: white;
     border: none;
     border-radius: 5px;
