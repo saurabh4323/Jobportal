@@ -118,12 +118,13 @@
     padding: 10px;
     z-index: 1000;
     animation: slideDown 0.3s ease-in-out forwards;
+    left: 10px;
   }
   
   .menu-items {
     display: flex;
     flex-direction: column;
-    width: 60vh;
+    width: 45vh;
     height: auto;
   }
   
@@ -178,6 +179,7 @@
 @media (max-width: 600px) {
     .nav {
         height: 60px;
+        scrollbar-width: 0;
     }
 
     .nav-left h1 {
@@ -197,11 +199,15 @@
         display: block;
     }
     .menu-items Button{
-        font-size: 1.2vh;
+        font-size: 1.7vh;
         margin-bottom: 1.6vh;
         width: auto;
     }
     .menu-items .register{
-        width: 60vh;
+        width: 300px;
+    }
+    .menu-items .login{
+        width: 300px;
+        margin-left: 27px;
     }
 }

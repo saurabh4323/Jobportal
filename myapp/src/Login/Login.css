@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 20px; /* Added padding for smaller screens */
 }
 
 .login-page::after {
@@ -25,7 +26,6 @@ body {
     right: 0;
     height: 100px;
     background: linear-gradient(to top, rgba(256, 256, 256, 0.95), rgba(256, 256, 256, 0.04));
-    /* border-image: fill 0 linear-gradient(#0003,#000); */
 }
 
 .toggle-container {
@@ -101,4 +101,45 @@ button:hover {
 
 p {
     margin-top: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+    }
+
+    .toggle-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 5px;
+    }
+
+    .toggle-button {
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+
+    .form-group input {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 6px 12px;
+    }
 }
