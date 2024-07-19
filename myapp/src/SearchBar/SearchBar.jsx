@@ -17,7 +17,6 @@ const Searchbar = () => {
         if (location === '' || jobType === '' || keyword === '') {
             return alert('All Fields are Required!!!');
         }
-        // Perform search logic here
     };
 
     return (

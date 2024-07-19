@@ -110,7 +110,7 @@
 }
 .responsive-menu {
     position: absolute;
-    top: 60px; /* Adjust as needed based on your design */
+    top: 60px; 
     right: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

@@ -1,4 +1,3 @@
-// FindAJob.jsx
 import React, { useState, useContext } from 'react';
 import './FindAJob.css';
 import { JobContext } from '../JobContext';

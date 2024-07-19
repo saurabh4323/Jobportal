@@ -1,4 +1,3 @@
-// JobListing.jsx
 import React, { useState, useContext } from 'react';
 import './JobListing.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
