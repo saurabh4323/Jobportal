@@ -1,8 +1,9 @@
-import JobPosting from "../Models/JobPosting";
+import JobPosting from "../Models/JobPosting.js";
 import asyncHandler from "express-async-handler";
 
 
 const jobPost = asyncHandler(async (req, res) => {
+  const recruiterId = req.recruiter._id
 
   const {
     jobTitle,
@@ -10,7 +11,7 @@ const jobPost = asyncHandler(async (req, res) => {
     vacancy,
     jobType,
     jobDescription,
-    salaryRange: { min, max },
+    salaryRange
   } = req.body;
 
   const companyLogo = req.file && req.file.filename;
@@ -22,7 +23,7 @@ const jobPost = asyncHandler(async (req, res) => {
     jobType,
     companyLogo,
     jobDescription,
-    salaryRange: { min, max },
+    salaryRange,
     recruiter: recruiterId,
   });
 
@@ -34,9 +35,25 @@ const jobPost = asyncHandler(async (req, res) => {
   }
 
 });
-//hi
+
+
+const editJob = asyncHandler(async (req, res) => {
+  const { id, jobTitle, jobLocation, vacancy, jobType, jobDescription, salaryRange } = req.body
+
+  let updateJob = await JobPosting.findByIdAndUpdate(id, { jobTitle: jobTitle, jobLocation: jobLocation, jobDescription: jobDescription, vacancy: vacancy, jobType: jobType, salaryRange: salaryRange })
+
+  if (updateJob) {
+    res.status(200).json({ status: true })
+  }
+  else {
+    res.status(400)
+    throw new Error('server error')
+  }
+
+})
 
 
 export {
-  jobPost
+  jobPost,
+  editJob
 }

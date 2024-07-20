@@ -146,4 +146,3 @@ const listJobs = asyncHandler(async (req, res) => {
 });
 
 export { authUser, SendOtp, verifyRegistration , listJobs };
-//hi
