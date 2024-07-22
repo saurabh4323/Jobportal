@@ -1,6 +1,6 @@
 import Users from "../Models/userModel.js";
 import Applications from '../Models/Application.js'
-import JobPosting from "../Models/JobPosting";
+import JobPosting from "../Models/JobPosting.js";
 
 
 import asyncHandler from "express-async-handler";
