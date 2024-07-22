@@ -141,8 +141,8 @@ const Contact = () => {
                   variant="contained"
                   color="primary"
                   style={{
-                   borderRadius:"50px",
-                   backgroundColor:"#3C65F5"
+                    borderRadius: "50px",
+                    backgroundColor: "#3C65F5",
                   }}
                   endIcon={<SendIcon />}
                 >

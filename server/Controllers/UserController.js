@@ -17,6 +17,7 @@ dotenv.config();
 
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
+  console.log(req.body)
 
   const user = await Users.findOne({ email });
 
@@ -58,7 +59,7 @@ const SendOtp = asyncHandler(async (req, res) => {
     throw new Error("mobile number already in use");
   }
 
-  const otp = generateOtp.generate(6, {
+  const otp = generateOtp.generate(4, {
     digits: true,
     alphabets: false,
     upperCase: false,
