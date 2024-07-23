@@ -17,9 +17,15 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }))
 app.use(cookieParser())
 app.use(express.static("server/Public"));
 
-app.use(cors());
+// Configure CORS
+app.use(cors({
+    origin: 'http://localhost:3000', // Replace with your frontend URL
+    credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+}));
 
-app.use('/api/users', userRoutes)
+app.use('/api/users', userRoutes);
 
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(PORT, () => console.log('server started on ${PORT}'))
