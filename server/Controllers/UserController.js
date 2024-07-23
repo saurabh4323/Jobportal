@@ -19,6 +19,7 @@ const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
   const user = await Users.findOne({ email });
+  console.log(req.body);
 
   if (!user) {
     res.status(400);

@@ -4,19 +4,37 @@ import { Link } from 'react-router-dom';
 
 export const Register = () => {
     const [isJobSeeker, setIsJobSeeker] = useState(true);
+    const [showOTP, setShowOTP] = useState(false);
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+        // Trigger OTP send logic here
+        setShowOTP(true);
+    };
+
+    const handleVerifyOTP = (e) => {
+        e.preventDefault();
+        // Verify OTP logic here
+    };
 
     return (
         <div className="register-page">
             <div className="toggle-container">
                 <button
                     className={isJobSeeker ? "toggle-button active" : "toggle-button"}
-                    onClick={() => setIsJobSeeker(true)}
+                    onClick={() => {
+                        setIsJobSeeker(true);
+                        setShowOTP(false);
+                    }}
                 >
                     Job Seeker
                 </button>
                 <button
                     className={!isJobSeeker ? "toggle-button active" : "toggle-button"}
-                    onClick={() => setIsJobSeeker(false)}
+                    onClick={() => {
+                        setIsJobSeeker(false);
+                        setShowOTP(false);
+                    }}
                 >
                     Employer
                 </button>
@@ -24,7 +42,7 @@ export const Register = () => {
 
             <div className="register-container">
                 <h2>{isJobSeeker ? "Job Seeker Register" : "Employer Register"}</h2>
-                <form>
+                <form onSubmit={showOTP ? handleVerifyOTP : handleRegister}>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
@@ -47,10 +65,16 @@ export const Register = () => {
                             <input type="text" id="company" name="company" required />
                         </div>
                     )}
-                    <button type="submit">Register</button>
+                    {showOTP && (
+                        <div className="form-group">
+                            <label htmlFor="otp">OTP:</label>
+                            <input type="text" id="otp" name="otp" required />
+                        </div>
+                    )}
+                    <button type="submit">{showOTP ? "Verify OTP" : "Register"}</button>
                 </form>
-                <p>Already have an account? <Link to="/login" style={{ textDecoration: 'none' }}>LogIn</Link></p>
-                <p><Link to="/" style={{ textDecoration: 'none',color:'black'}}>Back to Home</Link></p>
+                <p>Already have an account? <Link to="/login" style={{ textDecoration: 'none' }}>Log In</Link></p>
+                <p><Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Back to Home</Link></p>
             </div>
         </div>
     );
